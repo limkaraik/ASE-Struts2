@@ -48,16 +48,20 @@ public class User {
 	}
 	
 	public boolean register(String id,String pass, String Name) throws Exception {
-		ArrayList<String> arr= Main.findUser(id);
-		if (arr.size()!=0) {
-			return false;
-		}else {
-			boolean check = Main.addUser(id, pass, Name);
-			username = id;
-			password = pass;
-			name = Name;
-			return check;
-		}
+		boolean cr8 = Main.createTable();
+		if (cr8) {
+			ArrayList<String> arr= Main.findUser(id);
+			if (arr.size()!=0) {
+				return false;
+			}else {
+				boolean check = Main.addUser(id, pass, Name);
+				username = id;
+				password = pass;
+				name = Name;
+				return check;
+			}
+		}else return false;
+		
 	}
 	
 }
