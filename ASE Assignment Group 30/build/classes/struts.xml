@@ -14,8 +14,8 @@
 		</action>
 		<action name="register" class="com.controller.UserAction" method="register">
 			<result name="success">/success.jsp</result>
-			<result name="input">/index.jsp</result>
-			<result name="error">/index.jsp</result>
+			<result name="input">/register.jsp</result>
+			<result name="error">/register.jsp</result>
 		</action>
 		<action name="goToRegister" class="com.controller.UserAction" method="Redirect">
 			<result name="success">/register.jsp</result>
